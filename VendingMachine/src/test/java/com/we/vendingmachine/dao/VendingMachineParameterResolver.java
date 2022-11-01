@@ -30,7 +30,7 @@ public class VendingMachineParameterResolver implements ParameterResolver {
     @Override
     public Object resolveParameter(ParameterContext parameterContext, ExtensionContext extensionContext) {
         AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
-        appContext.scan("com.we.vendingmachine.dao");
+        appContext.scan("com.we.vendingmachine");
         appContext.refresh();
         
         VendingMachineDao testDao = appContext.getBean("vendingMachineDaoStubFileImpl", VendingMachineDaoStubFileImpl.class);
